@@ -14,6 +14,19 @@
 		0D801CC021623E2B00CE0A7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D801CBE21623E2B00CE0A7A /* LaunchScreen.storyboard */; };
 		0D801CCB21623E2B00CE0A7A /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D801CCA21623E2B00CE0A7A /* WeatherAppTests.swift */; };
 		0D801CD621623E2B00CE0A7A /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D801CD521623E2B00CE0A7A /* WeatherAppUITests.swift */; };
+		0D801CE4216245EA00CE0A7A /* CityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D801CE3216245EA00CE0A7A /* CityController.swift */; };
+		0D801CE82162554800CE0A7A /* DaysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D801CE72162554800CE0A7A /* DaysController.swift */; };
+		0D801CEA2162558500CE0A7A /* CurrentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D801CE92162558500CE0A7A /* CurrentController.swift */; };
+		0D801CEC216259BA00CE0A7A /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D801CEB216259BA00CE0A7A /* WeatherModel.swift */; };
+		0D801CEE21625A8600CE0A7A /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D801CED21625A8600CE0A7A /* Weather.swift */; };
+		0DA42BC6216652BA00BDBF50 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA42BC5216652BA00BDBF50 /* CurrentWeather.swift */; };
+		0DA42BC82166530500BDBF50 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA42BC72166530500BDBF50 /* Coordinate.swift */; };
+		0DA42BCA2166546D00BDBF50 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA42BC92166546D00BDBF50 /* Main.swift */; };
+		0DA42BCC2166555A00BDBF50 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA42BCB2166555A00BDBF50 /* Wind.swift */; };
+		0DA42BCE2166559A00BDBF50 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA42BCD2166559A00BDBF50 /* Cloud.swift */; };
+		0DA42BD0216655C800BDBF50 /* Sys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA42BCF216655C800BDBF50 /* Sys.swift */; };
+		0DA42BD3216664A700BDBF50 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA42BD2216664A700BDBF50 /* Utils.swift */; };
+		0DA42BD521666D5500BDBF50 /* steve.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0DA42BD421666D5500BDBF50 /* steve.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +60,19 @@
 		0D801CD121623E2B00CE0A7A /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D801CD521623E2B00CE0A7A /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		0D801CD721623E2B00CE0A7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D801CE3216245EA00CE0A7A /* CityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityController.swift; sourceTree = "<group>"; };
+		0D801CE72162554800CE0A7A /* DaysController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysController.swift; sourceTree = "<group>"; };
+		0D801CE92162558500CE0A7A /* CurrentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentController.swift; sourceTree = "<group>"; };
+		0D801CEB216259BA00CE0A7A /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		0D801CED21625A8600CE0A7A /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		0DA42BC5216652BA00BDBF50 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		0DA42BC72166530500BDBF50 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		0DA42BC92166546D00BDBF50 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		0DA42BCB2166555A00BDBF50 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
+		0DA42BCD2166559A00BDBF50 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
+		0DA42BCF216655C800BDBF50 /* Sys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sys.swift; sourceTree = "<group>"; };
+		0DA42BD2216664A700BDBF50 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0DA42BD421666D5500BDBF50 /* steve.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = steve.jpeg; path = ../../steve.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +123,19 @@
 		0D801CB421623E2A00CE0A7A /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				0DA42BD421666D5500BDBF50 /* steve.jpeg */,
+				0DA42BD12166560A00BDBF50 /* Structures */,
 				0D801CB521623E2A00CE0A7A /* AppDelegate.swift */,
 				0D801CB721623E2A00CE0A7A /* ViewController.swift */,
 				0D801CB921623E2A00CE0A7A /* Main.storyboard */,
 				0D801CBC21623E2B00CE0A7A /* Assets.xcassets */,
 				0D801CBE21623E2B00CE0A7A /* LaunchScreen.storyboard */,
 				0D801CC121623E2B00CE0A7A /* Info.plist */,
+				0D801CE3216245EA00CE0A7A /* CityController.swift */,
+				0D801CE72162554800CE0A7A /* DaysController.swift */,
+				0D801CE92162558500CE0A7A /* CurrentController.swift */,
+				0D801CEB216259BA00CE0A7A /* WeatherModel.swift */,
+				0DA42BD2216664A700BDBF50 /* Utils.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -123,6 +156,20 @@
 				0D801CD721623E2B00CE0A7A /* Info.plist */,
 			);
 			path = WeatherAppUITests;
+			sourceTree = "<group>";
+		};
+		0DA42BD12166560A00BDBF50 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				0DA42BC5216652BA00BDBF50 /* CurrentWeather.swift */,
+				0DA42BC72166530500BDBF50 /* Coordinate.swift */,
+				0DA42BC92166546D00BDBF50 /* Main.swift */,
+				0DA42BCD2166559A00BDBF50 /* Cloud.swift */,
+				0DA42BCF216655C800BDBF50 /* Sys.swift */,
+				0D801CED21625A8600CE0A7A /* Weather.swift */,
+				0DA42BCB2166555A00BDBF50 /* Wind.swift */,
+			);
+			path = Structures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D801CC021623E2B00CE0A7A /* LaunchScreen.storyboard in Resources */,
+				0DA42BD521666D5500BDBF50 /* steve.jpeg in Resources */,
 				0D801CBD21623E2B00CE0A7A /* Assets.xcassets in Resources */,
 				0D801CBB21623E2A00CE0A7A /* Main.storyboard in Resources */,
 			);
@@ -256,8 +304,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA42BCA2166546D00BDBF50 /* Main.swift in Sources */,
+				0DA42BCE2166559A00BDBF50 /* Cloud.swift in Sources */,
+				0D801CE82162554800CE0A7A /* DaysController.swift in Sources */,
+				0DA42BD3216664A700BDBF50 /* Utils.swift in Sources */,
+				0D801CE4216245EA00CE0A7A /* CityController.swift in Sources */,
+				0DA42BC6216652BA00BDBF50 /* CurrentWeather.swift in Sources */,
+				0DA42BCC2166555A00BDBF50 /* Wind.swift in Sources */,
+				0DA42BD0216655C800BDBF50 /* Sys.swift in Sources */,
 				0D801CB821623E2A00CE0A7A /* ViewController.swift in Sources */,
+				0D801CEA2162558500CE0A7A /* CurrentController.swift in Sources */,
+				0DA42BC82166530500BDBF50 /* Coordinate.swift in Sources */,
+				0D801CEC216259BA00CE0A7A /* WeatherModel.swift in Sources */,
 				0D801CB621623E2A00CE0A7A /* AppDelegate.swift in Sources */,
+				0D801CEE21625A8600CE0A7A /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
