@@ -10,4 +10,14 @@ import Foundation
 
 class WeatherModel {
     
+    var coordinates : Coordinate?
+    var usingGPS : Bool
+    var city : String
+    var currentWeather : CurrentWeather?
+    
+    init() {
+        usingGPS = true
+        city = ""
+    }
+    
 }

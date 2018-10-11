@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D6BD441216FA2F9000B0393 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 0D6BD440216FA2F9000B0393 /* icons */; };
 		0D801CB621623E2A00CE0A7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D801CB521623E2A00CE0A7A /* AppDelegate.swift */; };
 		0D801CB821623E2A00CE0A7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D801CB721623E2A00CE0A7A /* ViewController.swift */; };
 		0D801CBB21623E2A00CE0A7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D801CB921623E2A00CE0A7A /* Main.storyboard */; };
@@ -27,6 +28,10 @@
 		0DA42BD0216655C800BDBF50 /* Sys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA42BCF216655C800BDBF50 /* Sys.swift */; };
 		0DA42BD3216664A700BDBF50 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA42BD2216664A700BDBF50 /* Utils.swift */; };
 		0DA42BD521666D5500BDBF50 /* steve.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0DA42BD421666D5500BDBF50 /* steve.jpeg */; };
+		0DBDE9B7216CD80E005CEAA5 /* DaysWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBDE9B6216CD80E005CEAA5 /* DaysWeather.swift */; };
+		0DBDE9B9216CDAAE005CEAA5 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBDE9B8216CDAAE005CEAA5 /* List.swift */; };
+		0DBDE9BB216CE205005CEAA5 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBDE9BA216CE205005CEAA5 /* CustomTableViewCell.swift */; };
+		0DBDE9BD216CFA30005CEAA5 /* win.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DBDE9BC216CFA2F005CEAA5 /* win.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D6BD440216FA2F9000B0393 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = ../../icons; sourceTree = "<group>"; };
 		0D801CB221623E2A00CE0A7A /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D801CB521623E2A00CE0A7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D801CB721623E2A00CE0A7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +79,10 @@
 		0DA42BCF216655C800BDBF50 /* Sys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sys.swift; sourceTree = "<group>"; };
 		0DA42BD2216664A700BDBF50 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0DA42BD421666D5500BDBF50 /* steve.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = steve.jpeg; path = ../../steve.jpeg; sourceTree = "<group>"; };
+		0DBDE9B6216CD80E005CEAA5 /* DaysWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysWeather.swift; sourceTree = "<group>"; };
+		0DBDE9B8216CDAAE005CEAA5 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		0DBDE9BA216CE205005CEAA5 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		0DBDE9BC216CFA2F005CEAA5 /* win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = win.png; path = ../../win.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +133,8 @@
 		0D801CB421623E2A00CE0A7A /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				0D6BD440216FA2F9000B0393 /* icons */,
+				0DBDE9BC216CFA2F005CEAA5 /* win.png */,
 				0DA42BD421666D5500BDBF50 /* steve.jpeg */,
 				0DA42BD12166560A00BDBF50 /* Structures */,
 				0D801CB521623E2A00CE0A7A /* AppDelegate.swift */,
@@ -136,6 +148,7 @@
 				0D801CE92162558500CE0A7A /* CurrentController.swift */,
 				0D801CEB216259BA00CE0A7A /* WeatherModel.swift */,
 				0DA42BD2216664A700BDBF50 /* Utils.swift */,
+				0DBDE9BA216CE205005CEAA5 /* CustomTableViewCell.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -168,6 +181,8 @@
 				0DA42BCF216655C800BDBF50 /* Sys.swift */,
 				0D801CED21625A8600CE0A7A /* Weather.swift */,
 				0DA42BCB2166555A00BDBF50 /* Wind.swift */,
+				0DBDE9B6216CD80E005CEAA5 /* DaysWeather.swift */,
+				0DBDE9B8216CDAAE005CEAA5 /* List.swift */,
 			);
 			path = Structures;
 			sourceTree = "<group>";
@@ -276,8 +291,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DBDE9BD216CFA30005CEAA5 /* win.png in Resources */,
 				0D801CC021623E2B00CE0A7A /* LaunchScreen.storyboard in Resources */,
 				0DA42BD521666D5500BDBF50 /* steve.jpeg in Resources */,
+				0D6BD441216FA2F9000B0393 /* icons in Resources */,
 				0D801CBD21623E2B00CE0A7A /* Assets.xcassets in Resources */,
 				0D801CBB21623E2A00CE0A7A /* Main.storyboard in Resources */,
 			);
@@ -304,6 +321,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DBDE9B7216CD80E005CEAA5 /* DaysWeather.swift in Sources */,
+				0DBDE9B9216CDAAE005CEAA5 /* List.swift in Sources */,
 				0DA42BCA2166546D00BDBF50 /* Main.swift in Sources */,
 				0DA42BCE2166559A00BDBF50 /* Cloud.swift in Sources */,
 				0D801CE82162554800CE0A7A /* DaysController.swift in Sources */,
@@ -311,6 +330,7 @@
 				0D801CE4216245EA00CE0A7A /* CityController.swift in Sources */,
 				0DA42BC6216652BA00BDBF50 /* CurrentWeather.swift in Sources */,
 				0DA42BCC2166555A00BDBF50 /* Wind.swift in Sources */,
+				0DBDE9BB216CE205005CEAA5 /* CustomTableViewCell.swift in Sources */,
 				0DA42BD0216655C800BDBF50 /* Sys.swift in Sources */,
 				0D801CB821623E2A00CE0A7A /* ViewController.swift in Sources */,
 				0D801CEA2162558500CE0A7A /* CurrentController.swift in Sources */,

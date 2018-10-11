@@ -12,6 +12,14 @@ class Utils {
     
     
     static func kelvinToCelsius(degrees: Double) -> Double {
-        return degrees - 273.15
+        let formatter = NumberFormatter()
+        let number = NSNumber(value: degrees - 273.15)
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 1
+        let fixed = String(formatter.string(from: number) ?? "")
+        let end = Double(fixed)
+        
+        return end!
     }
+    
 }

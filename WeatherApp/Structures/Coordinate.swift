@@ -10,4 +10,9 @@
 class Coordinate : Decodable {
     var lon: Double?
     var lat: Double?
+    
+    init(longitude: Double, latitude: Double) {
+        self.lon = longitude
+        self.lat = latitude
+    }
 }

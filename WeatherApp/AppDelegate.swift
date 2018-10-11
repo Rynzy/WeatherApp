@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate  {
 
     var window: UIWindow?
-
+    var manager: CLLocationManager = CLLocationManager()
+    var weatherModel: WeatherModel?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.weatherModel = WeatherModel()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.requestLocation()
+        
         return true
     }
 
@@ -39,6 +48,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("error:: \(error.localizedDescription)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            manager.requestLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if locations.first != nil {
+            self.weatherModel?.coordinates?.lat = locations[0].coordinate.latitude
+            self.weatherModel?.coordinates?.lon = locations[0].coordinate.longitude
+            
+            let coords = Coordinate(longitude: locations[0].coordinate.longitude, latitude: locations[0].coordinate.latitude)
+            
+            self.weatherModel?.coordinates = coords
+        }
     }
 
 
