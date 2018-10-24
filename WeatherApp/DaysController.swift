@@ -25,9 +25,6 @@ class DaysController: UITableViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.weatherModel = appDelegate.weatherModel
         
-
-
-                        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
     
     @objc func update() {
@@ -35,7 +32,7 @@ class DaysController: UITableViewController {
         if(!fetching) {
             if(self.weatherModel?.usingGPS)! {
                 if(self.weatherModel?.coordinates != nil) {
-                    
+                    fetchUrlCoordinates(coords: (self.weatherModel?.coordinates)!)
                 }
             } else if(!(self.weatherModel?.city.isEmpty)!) {
                 fetchUrlCity(city: (self.weatherModel?.city)!)
@@ -64,7 +61,7 @@ class DaysController: UITableViewController {
 
         if(proceed) {
             let icon = (self.daysWeather?.list?[indexPath.row].weather![0].icon!)!
-           cell.icon?.image = UIImage(named: "icons/\(icon).png")
+           cell.icon?.image = UIImage(named: "\(icon).png")
             cell.bottom.text = self.data[indexPath.row]
             cell.top.text = self.data2[indexPath.row]
          
@@ -79,7 +76,7 @@ class DaysController: UITableViewController {
     func fetchUrlCity(city : String) {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
-        let url : URL? = URL(string: "http://api.openweathermap.org/data/2.5/forecast?q=Tampere&APPID=a703ba05d58171564102b2db7b9bb014")
+        let url : URL? = URL(string: "http://api.openweathermap.org/data/2.5/forecast?q=\(city)&APPID=a703ba05d58171564102b2db7b9bb014")
         let task = session.dataTask(with: url!, completionHandler: doneFetchingCity);
         
         task.resume();
@@ -107,9 +104,48 @@ class DaysController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-       /* self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
- */
+        data = [String]()
+        data2 = [String]()
+        proceed = false
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         
+        
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        
+
+        
+    }
+    
+    func fetchUrlCoordinates(coords : Coordinate) {
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let lat = (self.weatherModel?.coordinates?.lat!)!
+        let lon = (self.weatherModel?.coordinates?.lon!)!
+        
+        let url : URL? = URL(string: "http://api.openweathermap.org/data/2.5/forecast?lat=\(lat)&lon=\(lon)&APPID=a703ba05d58171564102b2db7b9bb014")
+        let task = session.dataTask(with: url!, completionHandler: doneFetchingCoordinates);
+        
+        task.resume();
+    }
+    
+    func doneFetchingCoordinates(data: Data?, response: URLResponse?, error: Error?) {
+        
+        do {
+            let weatherData = try JSONDecoder().decode(DaysWeather.self, from: data!)
+            self.daysWeather = weatherData
+            let size = (weatherData.list?.count)! - 1
+            for i  in 0...size {
+                self.data.append(weatherData.list![i].dt_txt!)
+                let desc = weatherData.list![i].weather![0].main!
+                let heat = Utils.kelvinToCelsius(degrees: (weatherData.list![i].main?.temp)!)
+                self.data2.append("\(desc) \(heat) °C")
+            }
+            
+        } catch {
+            print(error)
+        }
     }
     
     

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ugK-CC-QMX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ugK-CC-QMX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -63,7 +63,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Current" id="Peq-UJ-GTX"/>
+                    <tabBarItem key="tabBarItem" title="Current" image="01d.png" selectedImage="01d.png" id="Peq-UJ-GTX"/>
                     <connections>
                         <outlet property="cityLabel" destination="4aw-FN-PLn" id="1ta-tU-Mjd"/>
                         <outlet property="degreesLabel" destination="6d7-PV-F9Q" id="bQd-qN-G6J"/>
@@ -149,7 +149,7 @@
                             <outlet property="delegate" destination="URx-aN-NXp" id="uU0-Fe-WEG"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="5 Days" id="9ue-k3-Rlt"/>
+                    <tabBarItem key="tabBarItem" title="5 Days" image="03d.png" selectedImage="03d.png" id="9ue-k3-Rlt"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZK-pX-pe4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -223,7 +223,7 @@
                             <outlet property="delegate" destination="BEZ-Lg-jFe" id="zg3-XQ-HBq"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="City" id="171-HV-wCX"/>
+                    <tabBarItem key="tabBarItem" title="City" image="50n.png" selectedImage="50n.png" id="171-HV-wCX"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="editButton" destination="K5v-Gz-jVE" id="14a-AY-w73"/>
@@ -236,4 +236,9 @@
             <point key="canvasLocation" x="-1380" y="218.1409295352324"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="01d.png" width="50" height="50"/>
+        <image name="03d.png" width="50" height="50"/>
+        <image name="50n.png" width="50" height="50"/>
+    </resources>
 </document>

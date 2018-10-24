@@ -94,7 +94,7 @@ class CurrentController: UIViewController {
         
         let url : URL? = URL(string: "http://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(lon)\(apiKey)")
         
-
+        print(url)
         let task = session.dataTask(with: url!, completionHandler: doneFetchingCoordinates);
         
         task.resume();

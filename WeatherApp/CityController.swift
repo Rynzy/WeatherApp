@@ -10,7 +10,7 @@ import UIKit
 
 class CityController: UITableViewController {
     
-    var data = ["Use GPS", "Turku", "Tampere", "Helsinki"]
+    var data = ["Use GPS"]
     var editOn : Bool = false
     var weatherModel : WeatherModel?
     var selection = "Use GPS"
@@ -26,6 +26,7 @@ class CityController: UITableViewController {
                 self.tableView.insertRows(at: [IndexPath(row: self.data.count-1, section: 0)], with: .automatic)
                 self.tableView.endUpdates()
                 newCity.text = ""
+                handleFile()
             }
         }
     }
@@ -44,6 +45,7 @@ class CityController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        initData()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -81,12 +83,13 @@ class CityController: UITableViewController {
         if editingStyle == .delete {
             self.data.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            handleFile()
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+       
         self.tableView.selectRow(at: selectionCell, animated: false, scrollPosition: .none)
     }
     
@@ -94,6 +97,53 @@ class CityController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
+    func handleFile() {
+    
+    let file = "cities.txt" 
+    var text : String = ""
+
+    if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+        
+        let fileURL = dir.appendingPathComponent(file)
+        
+            do {
+                let text2 = try String(contentsOf: fileURL, encoding: .utf8)
+                let lines : [String] = text2.components(separatedBy: "\n")
+                
+                data.forEach { (item) in
+                    if(!item.isEmpty) {
+                        text.append("\(item)\n")
+                    }
+                }
+                try text.write(to: fileURL, atomically: false, encoding: .utf8)
+            }
+            catch {}
+        
+    }
+    }
+    
+    func initData() {
+        
+        let file = "cities.txt"
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            
+            let fileURL = dir.appendingPathComponent(file)
+            
+            do {
+                let text2 = try String(contentsOf: fileURL, encoding: .utf8)
+                let lines : [String] = text2.components(separatedBy: "\n")
+
+                lines.forEach { (item) in
+                    if(!item.isEmpty && item != "Use GPS") {
+                        data.append(item)
+                    }
+                }
+            }
+            catch {}
+            
+        }
+    }
     
 }
 
